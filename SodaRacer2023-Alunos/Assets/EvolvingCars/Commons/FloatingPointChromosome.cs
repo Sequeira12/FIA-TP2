@@ -76,7 +76,7 @@ namespace GeneticSharp.Runner.UnityApp.Commons
         public override string ToString()
         {
             
-            return String.Join(",", GetGenes().Select(g => g.Value.ToString()).ToArray());
+            return String.Join(";", GetGenes().Select(g => g.Value.ToString()).ToArray());
         }
     }
 
