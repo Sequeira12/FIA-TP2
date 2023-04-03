@@ -46,6 +46,17 @@ namespace GeneticSharp.Runner.UnityApp.Commons
             IChromosome offspring2 = parent2.CreateNew();
 
             //YOUR CODE HERE
+            
+            if (RandomizationProvider.Current.GetDouble() <= crossoverProbability){
+                int i = 0;
+                for(i = 0 ; i < parent1.Length;i++){
+                    if( RandomizationProvider.Current.GetDouble() >= 0.5){
+                        offspring1.ReplaceGene(i,parent2.GetGene(i));
+                        offspring2.ReplaceGene(i,parent1.GetGene(i));
+                    }
+                }
+            }
+
 
 
 

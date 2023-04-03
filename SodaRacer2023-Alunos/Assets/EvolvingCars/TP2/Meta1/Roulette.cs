@@ -26,7 +26,22 @@ public class Roulette : SelectionBase
         IList<IChromosome> parents = new List<IChromosome>();
 
         //YOUR CODE HERE
+        double sumFitness = 0.0f;
+        int i = 0;
+        for(i = 0; i < population.Count; i++){
+            sumFitness = sumFitness + population[i].Fitness;
+        }
 
+       
+        for(i = 0; i < number; i++){
+            var pointer = RandomizationProvider.Current.GetDouble();
+            double partial = 0.0f;
+            int index;
+            for(index = 0; partial <= pointer; index++){
+                partial += (population[index].Fitness / sumFitness);
+            }
+            parents.Add(population[index-1]);
+        }
         return parents;
     }
 }

@@ -27,6 +27,13 @@ public class GaussianMutation : IMutation
     public void Mutate(IChromosome chromosome, float probability)
     {
         //YOUR CODE HERE
+        int i = 0;
+        for(i = 0; i < chromosome.Length; i++){
+            if(RandomizationProvider.Current.GetDouble() <= probability){
+                var geneValue = SampleGaussian((double)chromosome.GetGene(i).Value,std);
+                chromosome.ReplaceGene(i,new Gene(geneValue));
+            }
+        }
 
     }
 
