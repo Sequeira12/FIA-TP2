@@ -47,14 +47,14 @@ namespace GeneticSharp.Runner.UnityApp.Car
                 float NumberOfWheels = c.NumberOfWheels;
                 float CarMass = c.CarMass;
                 int IsRoadComplete = c.IsRoadComplete ? 1 : 0;
-                
-                fitness = (float)(0.75 * MaxDistance + 0.25 * MaxDistanceTime);
 
+                // fitness = (float)(0.75 * MaxDistance + 0.25 * MaxDistanceTime);
+                //fitness = (float)(6000 * (MaxDistance) + 20000 * (IsRoadComplete) + 20000 * (1 / CarMass) + 16000 * (MaxVelocity / NumberOfWheels));
+                //fitness = MaxDistance / 200 + NumberOfWheels / 15 + MaxVelocity / 10 + IsRoadComplete * 10;
+                //fitness = 1000 * IsRoadComplete + 40 * MaxDistance + 5 * (1 / CarMass) + 15 * (1 / NumberOfWheels) + 200 * MaxVelocity + 150 * MaxDistance / (MaxDistanceTime + 1);
+                fitness = 30 * MaxDistance + 100 * IsRoadComplete + 20 * MaxDistance / (MaxDistanceTime + 1);
 
-                
-
-
-                c.Fitness = fitness;;
+                c.Fitness = fitness;
 
             } while (!c.Evaluated);
 

@@ -12,7 +12,7 @@ public static class GeneticAlgorithmConfigurations
     */
 
     public static float crossoverProbability = 0.9f; 
-    public static float mutationProbability = 0.05f; 
+    public static float mutationProbability = 0.1f; 
     public static int maximumNumberOfGenerations = 30; 
     public static int eliteSize = 2; 
 
