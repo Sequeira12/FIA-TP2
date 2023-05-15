@@ -1,0 +1,6 @@
+Generation;BestFitness;AverageFitnessPopulation;BestMaxDistance;BestMaxDistanceTime;BestNumberOfWheels;BestCarMass;BestIsRoadComplete
+1;10809;4412,45;0;0;13;226,1323;False
+2;11005;5375,1;0,8605787;5,026665;12;224,786;False
+3;11444;7210,6;0,5209843;5,002087;11;221,8742;False
+4;13502;9266,75;0;0;10;209,9721;False
+5;13796;10040,8;0;0;9;208,4709;False
